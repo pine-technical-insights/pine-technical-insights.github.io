@@ -6,7 +6,13 @@
         <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}</span>
         <span class="icon-menu"></span>
       </a>
-      <div class="nav-span"></div>
+      <div class="nav-span">
+        {% if site.logo %}
+          <a class="nav-logo-link no-hover" href="{{ '/' | relative_url }}" tabindex="-1">
+            <img src="{% include_cached smart-url url=site.logo %}" class="nav-logo" alt="{{ site.short_title | default:site.title }}" loading="lazy" />
+          </a>
+        {% endif %}
+      </div>
     </div>
   </div>
 </div>

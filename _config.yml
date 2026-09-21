@@ -1,5 +1,7 @@
 lang:                  en
 title:                 Pine Technical Insights
+description:           ""
+logo:                  /assets/img/logo_tree_only.png
 copyright:             © 2026. All rights reserved.
 
 accent_image:          /assets/img/sidebar-pine.jpg

@@ -1,0 +1,131 @@
+.nav-span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-logo-link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-right: 1.25rem;
+}
+
+.navbar .nav-logo {
+  max-width: none;
+  height: 3.75rem;
+  width: auto;
+}
+
+.resume-page {
+  .resume-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--accent-color);
+
+    h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      color: var(--body-color);
+    }
+  }
+
+  .resume-title {
+    margin: 0.15rem 0 0;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .resume-contact {
+    text-align: right;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .resume-print-btn {
+    flex-basis: 100%;
+    margin-top: 0.25rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 0.4rem;
+    background: transparent;
+    color: var(--accent-color);
+    font: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--accent-color);
+      color: var(--body-bg);
+    }
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    padding-bottom: 0.25rem;
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .resume-entry {
+    margin-bottom: 1.5rem;
+  }
+
+  .resume-entry-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.25rem 1rem;
+
+    h3 {
+      margin: 0;
+    }
+  }
+
+  .resume-dates {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .resume-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 2rem;
+
+    > div {
+      flex: 1 1 16rem;
+    }
+  }
+}
+
+@media print {
+  .resume-page {
+    .no-print {
+      display: none !important;
+    }
+
+    .resume-header {
+      margin-bottom: 1rem;
+    }
+
+    h2, h3 {
+      page-break-after: avoid;
+      break-after: avoid-page;
+    }
+
+    .resume-entry {
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+      margin-bottom: 1rem;
+    }
+  }
+}
