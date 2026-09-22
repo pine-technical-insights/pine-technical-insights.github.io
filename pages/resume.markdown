@@ -3,7 +3,7 @@ layout: page
 title: Resume
 permalink: /resume/
 menu: true
-order: 3
+order: 2
 description: Applied Mathematician — PhD, Mathematics
 class: resume-page
 ---
